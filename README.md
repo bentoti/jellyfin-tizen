@@ -8,9 +8,11 @@
 </p>
 
 ## Build Process
+
 _Also look [Wiki](https://github.com/jellyfin/jellyfin-tizen/wiki)._
 
 ### Prerequisites
+
 * Tizen Studio 4.6+ with IDE or Tizen Studio 4.6+ with CLI (<a href="https://developer.tizen.org/development/tizen-studio/download">https://developer.tizen.org/development/tizen-studio/download</a>)
 * Git
 * Node.js 16+
@@ -27,10 +29,12 @@ _Also look [Wiki](https://github.com/jellyfin/jellyfin-tizen/wiki)._
    ```sh
    git clone -b release-10.8.z https://github.com/jellyfin/jellyfin-web.git
    ```
+
    > Replace `release-10.8.z` with the name of the branch you want to build.
 
    > You can also use `git checkout` to switch branches.
 5. Clone or download Jellyfin Tizen (this) repository.
+
    ```sh
    git clone https://github.com/jellyfin/jellyfin-tizen.git
    ```
@@ -81,9 +85,11 @@ tizen package -t wgt -o . -- .buildResult
 
 1. Run emulator.
 2. Install package.
+
    ```sh
    tizen install -n Jellyfin.wgt -t T-samsung-5.5-x86
    ```
+
    > Specify target with `-t` option. Use `sdb devices` to list them.
 
 ### Deploy to TV
@@ -91,13 +97,17 @@ tizen package -t wgt -o . -- .buildResult
 1. Run TV.
 2. Activate Developer Mode on TV (<a href="https://developer.samsung.com/tv/develop/getting-started/using-sdk/tv-device">https://developer.samsung.com/tv/develop/getting-started/using-sdk/tv-device</a>).
 3. Connect to TV with Device Manager from Tizen Studio. Or with sdb.
+
    ```sh
    sdb connect YOUR_TV_IP
    ```
+
 4. If you are using a Samsung certificate, `Permit to install applications` on your TV using Device Manager from Tizen Studio. Or with sdb.
    > TODO: Find a command
 5. Install package.
+
    ```sh
    tizen install -n Jellyfin.wgt -t UE65NU7400
    ```
+
    > Specify target with `-t` option. Use `sdb devices` to list them.
